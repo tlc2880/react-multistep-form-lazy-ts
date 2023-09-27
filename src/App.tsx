@@ -38,6 +38,7 @@ function App() {
   function onSubmit(e: FormEvent) {
     e.preventDefault()
     if (!isLastStep) return next()
+    console.log(data);
     alert("Successful Account Creation")
   }
 
@@ -59,7 +60,9 @@ function App() {
           {currentStepIndex + 1} / {steps.length}
         </div>
         {step}
+       
         <div
+          className="button-container"
           style={{
             marginTop: "1rem",
             display: "flex",
@@ -68,11 +71,16 @@ function App() {
           }}
         >
           {!isFirstStep && (
-            <button type="button" onClick={back}>
+            <button 
+              className={'button'} 
+              type="button" onClick={back}
+            >
               Back
             </button>
           )}
-          <button type="submit">{isLastStep ? "Finish" : "Next"}</button>
+          <button 
+            className={'button'} 
+            type="submit">{isLastStep ? "Submit" : "Next"}</button>
         </div>
       </form>
     </div>

@@ -23,6 +23,8 @@ export default function PersonalForm({
         autoFocus
         required
         type="text"
+        placeholder="Joe"
+        pattern="([A-Z])[\w+.]{1,}"
         value={firstName}
         onChange={e => updateFields({ firstName: e.target.value })}
       />
@@ -30,6 +32,8 @@ export default function PersonalForm({
       <input
         required
         type="text"
+        placeholder="Doe"
+        pattern="([A-Z])[\w+.]{1,}"
         value={lastName}
         onChange={e => updateFields({ lastName: e.target.value })}
       />
@@ -37,7 +41,10 @@ export default function PersonalForm({
       <input
         required
         min={1}
-        type="number"
+        type="text"
+        placeholder="50"
+        pattern="\b([1-9]|[1-9][0-9]|1[01][0-9]|12[0])\b" // maximum is 120 yrs old
+        maxLength={3}
         value={age}
         onChange={e => updateFields({ age: e.target.value })}
       />

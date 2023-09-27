@@ -25,6 +25,8 @@ export default function AddressForm({
         autoFocus
         required
         type="text"
+        placeholder="555 Wallaby Way"
+        pattern="[\w\d\s.#]{2,}"
         value={street}
         onChange={e => updateFields({ street: e.target.value })}
       />
@@ -32,6 +34,8 @@ export default function AddressForm({
       <input
         required
         type="text"
+        placeholder="New York"
+        pattern="[\w\d\s.#]{2,}"
         value={city}
         onChange={e => updateFields({ city: e.target.value })}
       />
@@ -46,6 +50,9 @@ export default function AddressForm({
       <input
         required
         type="text"
+        placeholder="12345"
+        pattern="[0-9]{5}"
+        maxLength = {5}
         value={zip}
         onChange={e => updateFields({ zip: e.target.value })}
       />
