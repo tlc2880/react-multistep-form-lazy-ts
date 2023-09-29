@@ -25,7 +25,7 @@ export default function AddressForm({
         autoFocus
         required
         type="text"
-        placeholder="555 Wallaby Way"
+        placeholder="123 W. Main Street"
         pattern="[\w\d\s.#]{2,}"
         value={street}
         onChange={e => updateFields({ street: e.target.value })}
