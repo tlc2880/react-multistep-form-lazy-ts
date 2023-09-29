@@ -12,14 +12,7 @@ export function FormWrapper({ title, children }: FormWrapperProps) {
         {title}
       </h2>
       
-      <div
-        style={{
-          // display: "grid",
-          gap: "1rem .5rem",
-          justifyContent: "flex-start",
-          gridTemplateColumns: "auto minmax(auto, 100px)",
-        }}
-      >
+      <div>
         {children}
       </div>
     </>
